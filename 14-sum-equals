@@ -1,0 +1,11 @@
+public Boolean sumEquals(Integer a, Integer b, Integer c) {
+    Boolean results = false;
+
+    // Compares total sum
+    if(a+b == c){
+        results = true;
+    }
+
+    // returns sum
+    return results;
+}
