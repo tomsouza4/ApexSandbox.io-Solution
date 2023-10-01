@@ -1,9 +1,10 @@
 public List<apxio__Student__c> selectActiveStudents() {
     // Get records with apxio__Active__c = true
-    List<apxio__Student__c> students = new List<apxio__Student__c>();
+    //List<apxio__Student__c> students = new List<apxio__Student__c>();
+    List<apxio__Student__c> students;
 
     // Gets list of apxio__Student__c
-    students.add(new apxio__Student__c([SELECT Id, Name, apxio__Active__c 
+    students = [SELECT Id, Name, apxio__Active__c 
                 FROM apxio__Student__c 
                 WHERE apxio__Active__c = true
                 AND Name != null
