@@ -1,0 +1,14 @@
+public String ageGroup(Integer n) {
+    String groupAge = '';
+    
+    if(n <= 1){
+        groupAge = 'Infant';
+    } else if(n <= 14){
+        groupAge = 'Child';
+    } else if(n <= 21){
+        groupAge = 'Youth';
+    } else{
+        groupAge = 'Adult';
+    }
+    return groupAge;
+}
