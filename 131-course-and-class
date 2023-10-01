@@ -15,7 +15,7 @@ public void createCourseAndClass(String name, String description) {
 
     // Validate the size of the description
     if(description.lenght() > 255){
-        description = description.substring(0,255);
+        //description = description.substring(0,255);
     }
 
     classes.add(new apxio__Class__c (Name = name, 
