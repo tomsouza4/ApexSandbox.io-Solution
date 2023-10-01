@@ -14,10 +14,12 @@ public void createCourseAndClass(String name, String description) {
     List<apxio__Class__c> classes = new List<apxio__Class__c>();
 
     // Validate the size of the description
-    if(description.length() > 255){
+    if(description != null && description.length() > 255){
         description = description.substring(0,255);
+    }else if(description == null){
+        description = '';
     }
-    System.debug('Tom Souza');
+    
 
     // Adds the new class based on Course
     classes.add(new apxio__Class__c (Name = name, 
