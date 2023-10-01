@@ -1,0 +1,14 @@
+public List<apxio__Student__c> selectActiveStudents() {
+    // Get records with apxio__Active__c = true
+    List<apxio__Student__c> students = new List<apxio__Student__c>();
+
+    // Gets list of apxio__Student__c
+    students.add(SELECT Id, Name 
+                FROM apxio__Student__c 
+                WHERE apxio__Active__c = true
+                AND Name NOT null);
+
+    // Return list students
+    return students;
+
+}
