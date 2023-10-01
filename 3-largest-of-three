@@ -1,0 +1,7 @@
+public static Integer findLargest(Integer num1, Integer num2, Integer num3) {
+	
+    List<Integer> numbers = new List<Integer>{num1, num2, num3};
+    numbers.sort();
+    Integer largestNumber = numbers[2];
+    return largestNumber;
+}
