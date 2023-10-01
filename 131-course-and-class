@@ -5,7 +5,7 @@ public void createCourseAndClass(String name, String description) {
     
     // List of Courses
     List<apxio__Course__c> courses = new List<apxio__Course__c>();
-    courses.add(Name = name, apxio__Course_Details__c = description);
+    courses.add(new apxio__Course__c(Name = name, apxio__Course_Details__c = description));
     
     // insert apxio__Course__c with name and description(if provided)
     insert courses;
