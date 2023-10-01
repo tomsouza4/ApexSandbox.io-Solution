@@ -3,7 +3,7 @@ public List<apxio__Student__c> selectActiveStudents() {
     List<apxio__Student__c> students = new List<apxio__Student__c>();
 
     // Gets list of apxio__Student__c
-    students.add(new apxio__Student__c([SELECT Id, Name 
+    students.add(new apxio__Student__c([SELECT Id, Name, apxio__Active__c 
                 FROM apxio__Student__c 
                 WHERE apxio__Active__c = true
                 AND Name != null
