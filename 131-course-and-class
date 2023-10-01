@@ -18,6 +18,7 @@ public void createCourseAndClass(String name, String description) {
         description = description.substring(0,255);
     }
 
+    // Adds the new class based on Course
     classes.add(new apxio__Class__c (Name = name, 
                                     apxio__Description__c = description, 
                                     apxio__Course__c = courses[0].Id));
