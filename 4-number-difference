@@ -1,0 +1,6 @@
+public Integer diff(Integer a, Integer b) {
+    //Number difference
+    Integer subtraction = a - b;
+    //Returns the absolute diff
+    return Math.abs(subtraction);
+}
