@@ -1,7 +1,7 @@
 public void createCourseAndClass(String name, String description) {
 
     //Maximum size truncate Description field
-    integer maxLength = 255;
+    integer maxLength = 254;
     
     // List of Courses
     List<apxio__Course__c> courses = new List<apxio__Course__c>();
