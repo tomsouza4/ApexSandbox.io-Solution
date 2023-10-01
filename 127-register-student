@@ -13,7 +13,7 @@ public String registerStudent(String name, String phone, String email) {
     insert students;
 
     // Query Registration Number based on student id
-    String registrationNumber = [SELECT apxio__Registration_Number__c 
+    apxio__Student__c registrationNumber = [SELECT apxio__Registration_Number__c 
                                         FROM apxio__Student__c 
                                         WHERE ID = students[0].ID];
 
