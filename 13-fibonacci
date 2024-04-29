@@ -9,7 +9,7 @@ public Integer fibonacci(Integer n) {
             // fib[2] = 1 + 1
             fib[i] = fib[i-1] + fib[i-2];
         }
-        return fib[n];
+        // return fib[n];
     } else {
         return 1;
     }
