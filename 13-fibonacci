@@ -1,11 +1,11 @@
 public Integer fibonacci(Integer n) {
     
-    List<Integer> fib = {1, 1};
-    Integer currentSum = 1;
+    List<Integer> fib = [1, 1];
+    // Integer currentSum = 1;
 
     if (n > 2){
         for (Integer i = 2; i < n; i++){
-            currentSum += i;
+            // currentSum += i;
             fib[i] = fib[i-1] + i;
         }
         return fib[n];
