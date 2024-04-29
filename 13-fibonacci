@@ -8,7 +8,7 @@ public Integer fibonacci(Integer n) {
             // currentSum += i;
             fib[i] = fib[i-1] + i;
         }
-        return fib[n];
+        return fib[n-1];
     } else {
         return 1;
     }
