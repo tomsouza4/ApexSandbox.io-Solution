@@ -1,0 +1,12 @@
+public String changeTimeFormat(String strTime) {
+
+    String[] parts = strTime.split(':');
+    Integer hour = Integer.valueOf(parts[0]);
+    Integer mins = Integer.valueOf(parts[1]);
+
+    DateTime dt = DateTime.newInstance(2001, 1, 1, hour, mins, 0);
+
+    String formattedDate = dt.format('hh:mm a');
+
+    return formattedDate;
+}
