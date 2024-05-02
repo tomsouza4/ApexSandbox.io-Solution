@@ -1,4 +1,5 @@
 public Integer nextPrime(Integer num) {
+    
     num++;
     if (isPrime(num)) {
         System.debug('it is a Prime: ' + num);
@@ -12,23 +13,25 @@ public Integer nextPrime(Integer num) {
     }
 }
 
-    private Boolean isPrime(Integer num) {
-        
-        boolean isItPrime = false;
+private Boolean isPrime(Integer num) {
+    
+    boolean isItPrime = false;
 
-        if (num == 2) {
-            isItPrime = true;
-        } else {
-            // must be odd 
-            if (Math.mod(num, 2) == 1) {
-                for (Integer i = 3; i <= num; i++) {
-                    // only divisible by itself
-                    if (Math.mod(num, i)  == 0) {
-                        isItPrime = true;
-                    } 
-                }
-            } 
-        }
-        // return primeNumbers[primeNumbers.size() - 1];
-        return isItPrime;      
+    if (num == 2) {
+        isItPrime = true;
+    } else {
+        // must be odd 
+        if (Math.mod(num, 2) == 1) {
+            for (Integer i = 3; i <= num; i++) {
+                // only divisible by itself
+                if (Math.mod(num, i) == 0 && !(i < num)) {
+                    isItPrime = true;
+                } 
+            }
+        } 
     }
+
+    return isItPrime;      
+}
+
+// nextPrime(31);
