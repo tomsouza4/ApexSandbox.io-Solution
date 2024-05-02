@@ -8,7 +8,7 @@ public Integer nextPrime(Integer num) {
         while (isPrime(num) == false) {
             num += 1;            
         }
-        System.debug('it is a Prime: ' + num);
+        System.debug('nearest Prime: ' + num);
         return num;        
     }
 }
@@ -24,14 +24,17 @@ private Boolean isPrime(Integer num) {
         if (Math.mod(num, 2) == 1) {
             for (Integer i = 3; i <= num; i++) {
                 // only divisible by itself
-                if (Math.mod(num, i) == 0 && !(i < num)) {
+                // 33/3 => 0
+                if (Math.mod(num, i) == 0 && i < num) {
+                    isItPrime = false;
+                    break;
+                } else {
                     isItPrime = true;
-                } 
+                }
             }
         } 
     }
-
     return isItPrime;      
 }
 
-// nextPrime(31);
+// nextPrime(32);
