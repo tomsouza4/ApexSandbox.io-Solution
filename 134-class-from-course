@@ -3,5 +3,8 @@ public Id classFromCourse(String courseName) {
 
     apxio__Class__c apxioClass = new apxio__Class__c(Course = courses[0].Id);
     
+    insert apxioClass;
+
+    return apxioClass.Id;
     
 }
