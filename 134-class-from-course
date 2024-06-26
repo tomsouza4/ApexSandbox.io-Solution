@@ -3,7 +3,7 @@ public Id classFromCourse(String courseName) {
     List<apxio__Course__c> courses = [SELECT Id, Name FROM apxio__Course__c WHERE Name = :courseName];
     List<apxio__Class__c> classes = new List<apxio__Class__c>(); 
 
-    if (courses.size == 0){
+    if (courses.size() == 0){
         return null;
     } else {
         for(Integer i = 0; i < courses.size(); i++){
