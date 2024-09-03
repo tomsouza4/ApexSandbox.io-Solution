@@ -2,6 +2,6 @@ public String divide(Integer a, Integer b){
     try {
         return String.valueOf(a / b);
     } catch (MathException mathEx) {
-        return mathEx.toString();
+        return 'Divide by 0';
     }
 }
