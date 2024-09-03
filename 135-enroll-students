@@ -5,8 +5,7 @@ public void enrollStudents(List<String> emails, String className) {
     List<apxio__Student__c> students = [SELECT 
                                         Id 
                                         FROM apxio__Student__c 
-                                        WHERE apxio__Email__c 
-                                        IN :emails];
+                                        WHERE apxio__Email__c IN :emails];
     
     // List<apxio__Class__c>   classes  = [SELECT Id,  
     //                                     FROM apxio__Class__c 
