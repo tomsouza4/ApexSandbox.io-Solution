@@ -1,0 +1,4 @@
+public Boolean isTypeAccount(sObject record) {
+    System.Type objectType = record.getType();
+    return objectType == 'Account' ? true : false;
+}
