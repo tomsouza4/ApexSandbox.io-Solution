@@ -20,6 +20,6 @@ public void enrollStudents(List<String> emails, String className) {
         classEnrollments.add(enrollment);
     }
 
-    // insert classEnrollments;
+    insert classEnrollments;
 
 }
