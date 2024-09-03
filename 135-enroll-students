@@ -1,4 +1,6 @@
 public void enrollStudents(List<String> emails, String className) {
+    System.debug('***emails: ' + emails);
+    System.debug('***classname: ' + className);
 
     List<apxio__Class_Enrollment__c> classEnrollments = new List<apxio__Class_Enrollment__c>();
     
@@ -7,12 +9,15 @@ public void enrollStudents(List<String> emails, String className) {
                                         FROM apxio__Student__c 
                                         WHERE apxio__Email__c IN :emails
                                         ];
-    
-    List<apxio__Class__c>   classes  = [SELECT Id  
+    System.debug('***students' + students);
+                 
+    List<apxio__Class__c>   classes  = [SELECT Id, Name  
                                         FROM apxio__Class__c 
-                                        WHERE apxio__Course__c = :className
+                                        WHERE Name = :className
                                         ]; 
-
+    
+    System.debug('***classes' + classes);
+    
     for (apxio__Student__c student : students) {
         apxio__Class_Enrollment__c enrollment = new apxio__Class_Enrollment__c ();
         enrollment.apxio__Student__c = student.Id;
@@ -21,5 +26,4 @@ public void enrollStudents(List<String> emails, String className) {
     }
 
     insert classEnrollments;
-
 }
