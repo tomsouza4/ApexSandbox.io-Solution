@@ -1,6 +1,8 @@
 public String divide(Integer a, Integer b){
     
-    a == null || b == null ? return 'Result does not match.' : continue;
+    if (a == null || b == null) { 
+        return 'Result does not match.'
+    };
     
     try {
         return String.valueOf(a / b);
