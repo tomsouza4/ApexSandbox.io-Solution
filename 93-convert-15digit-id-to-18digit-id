@@ -1,4 +1,4 @@
 public String convert15to18DigitId(String fifteenDigit) {
     Id converted15Digit = fifteenDigit;
-    return String.isEmpty(fifteenDigit) ? -1 : converted15Digit;
+    return converted15Digit == NULL ? -1 : converted15Digit;
 }
