@@ -4,20 +4,20 @@ public void enrollStudents(List<String> emails, String className) {
 
     List<apxio__Class_Enrollment__c> classEnrollments = new List<apxio__Class_Enrollment__c>();
     
-    List<apxio__Student__c> students = [SELECT 
-                                        Id 
+    List<apxio__Student__c> students = [SELECT Id 
                                         FROM apxio__Student__c 
                                         WHERE apxio__Email__c IN :emails
                                         ];
     System.debug('***students' + students);
                  
-    List<apxio__Class__c>   classes  = [SELECT Id, Name  
+    List<apxio__Class__c>   classes  = [SELECT Id  
                                         FROM apxio__Class__c 
                                         WHERE Name = :className
                                         ]; 
     
     System.debug('***classes' + classes);
     
+    if (students.size() == 0 || classes.size() == 0) return;
     for (apxio__Student__c student : students) {
         apxio__Class_Enrollment__c enrollment = new apxio__Class_Enrollment__c ();
         enrollment.apxio__Student__c = student.Id;
