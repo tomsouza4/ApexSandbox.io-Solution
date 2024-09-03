@@ -1,4 +1,7 @@
 public String divide(Integer a, Integer b){
+    
+    a == null || b == null ? 'Result does not match.' : continue;
+    
     try {
         return String.valueOf(a / b);
     } catch (MathException mathEx) {
