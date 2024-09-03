@@ -17,7 +17,7 @@ public void enrollStudents(List<String> emails, String className) {
     
     System.debug('***classes' + classes);
     
-    if (students != NULL && classes.size() > 0) {
+    if (students != NULL) {
         for (apxio__Student__c student : students) {
             apxio__Class_Enrollment__c enrollment = new apxio__Class_Enrollment__c ();
             enrollment.apxio__Student__c = student.Id;
