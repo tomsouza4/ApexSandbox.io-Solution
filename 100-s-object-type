@@ -1,4 +1,4 @@
 public Boolean isTypeAccount(sObject record) {
-    System.Type objectType = record.getType();
-    return objectType == 'Account' ? true : false;
+    Schema.SObjectType expected = Schema.Account.getSObjectType();
+    return record == expected ? true : false;
 }
