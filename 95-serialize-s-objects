@@ -1,4 +1,3 @@
 public String getAccountsInJSONFormat(List<Account> accounts){
-    // return JSON.serialize(new List<Object>{accounts});
     return JSON.serialize(accounts);
 }
