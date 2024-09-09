@@ -1,0 +1,10 @@
+public String getAccountsInJSONFormat(List<Account> accounts){
+    
+    // List<String> convertToJson = new List<String>();
+
+    // for(Account acc : accounts) {
+    //     convertToJson.add(JSON.serialize(acc));
+    // }
+
+    return JSON.serialize(new List<String>{accounts});
+}
