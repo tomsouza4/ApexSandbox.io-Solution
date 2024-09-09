@@ -1,0 +1,8 @@
+public List<String> getFieldsValue(Account acc, List<String> fields) {
+    String result = '['
+
+    for (String field : fields) {
+        result += (String)acc.get(field);    
+    }
+    return result + ']'
+}
