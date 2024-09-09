@@ -6,5 +6,5 @@ public String getAccountsInJSONFormat(List<Account> accounts){
     //     convertToJson.add(JSON.serialize(acc));
     // }
 
-    return JSON.serialize(new List<Account>{accounts});
+    return JSON.serialize(new List<Object>{accounts});
 }
